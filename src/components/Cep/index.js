@@ -4,7 +4,7 @@ import { Section, H1, H2 } from './styled';
 
 export default function CEP(props) {
   const { cep } = props;
-  console.log(Object.keys(cep).length);
+
   if (Object.keys(cep).length === 1) {
     return (
       <Section>
