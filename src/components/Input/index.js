@@ -30,7 +30,9 @@ export default class Input extends Component {
         })
       );
     } catch (error) {
-      console.log(error);
+      this.setState({
+        cep: error,
+      });
     }
   };
 
