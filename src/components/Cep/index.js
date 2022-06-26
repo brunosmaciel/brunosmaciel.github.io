@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Section, H1, H2 } from './styled';
@@ -5,7 +6,7 @@ import { Section, H1, H2 } from './styled';
 export default function CEP(props) {
   const { cep } = props;
 
-  if (Object.keys(cep).length === 1) {
+  if (Object.keys(cep).length === 1 || Object.keys(cep).length === 0) {
     return (
       <Section>
         <H1>{cep.erro}</H1>
