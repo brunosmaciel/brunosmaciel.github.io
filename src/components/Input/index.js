@@ -4,7 +4,8 @@
 import React, { Component } from 'react';
 import axios from '../../services/axios';
 
-import { InputText } from './styled';
+import { FormField, InputText } from './styled';
+import CEP from '../Cep/index';
 
 export default class Input extends Component {
   state = {
@@ -39,14 +40,12 @@ export default class Input extends Component {
   render() {
     const { cep } = this.state;
     return (
-      <div>
+      <FormField>
         <form action="/" onSubmit={this.handleSubmit}>
           <InputText type="text" onChange={this.handleChange} maxLength="8" />
         </form>
-        {Object.values(cep).map((obj, i) => {
-          return <li key={i}>{obj}</li>;
-        })}
-      </div>
+        <CEP cep={cep} />
+      </FormField>
     );
   }
 }

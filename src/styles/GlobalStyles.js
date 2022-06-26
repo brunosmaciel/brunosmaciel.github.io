@@ -17,9 +17,8 @@ export default createGlobalStyle`
     height:100%;
   }
   input[type="text"]{
-    border: none;
     outline: none;
-    background-color:${colors.secondaryColor};
+    background-color:${colors.tertiaryColor};
   }
   ul,li{
     list-style:none;
